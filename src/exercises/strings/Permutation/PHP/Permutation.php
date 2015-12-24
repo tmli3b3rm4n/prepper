@@ -5,7 +5,7 @@
  * @author Tim Lieberman
  */
 
-namespace src\Exercises\Strings\Permutation;
+namespace src\Exercises\Strings\Permutation\PHP;
 
 class Permutation
 {
