@@ -2,8 +2,11 @@
 /**
  * Class Permutation
  *
- * This class isn't finished.  Tim
+ * @author Tim Lieberman
  */
+
+namespace src\Exercises\Strings\Permutation;
+
 class Permutation
 {
     /**
@@ -21,11 +24,10 @@ class Permutation
 
         $return = [];
         for ($i = count($items) - 1; $i >= 0; --$i) {
-            $newItems = $items;
-            list($foo) = array_splice($newItems, $i, 1);
+            list($foo) = array_splice($items, $i, 1);
             array_unshift($perms, $foo);
-            $this->permutation($newItems, $perms);
-            $return = array_merge($return, $this->permutation($newItems, $perms));
+            $this->permutate($items, $perms);
+            $return = array_merge($return, $this->permutate($items, $perms));
         }
 
         return $return;
