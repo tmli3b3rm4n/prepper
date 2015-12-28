@@ -32,4 +32,19 @@ class Permutation
 
         return $return;
     }
+
+
+    /**
+     * Determine if one string is a permutation of another
+     *
+     * @param $string1
+     * @param $string2
+     * @return bool
+     */
+    public function isPermutateFamily($string1, $string2)
+    {
+        $permutates = $this->permutate($string1);
+
+        return in_array($string2, $permutates);
+    }
 }
