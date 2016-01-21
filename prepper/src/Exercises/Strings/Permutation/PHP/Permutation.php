@@ -43,6 +43,10 @@ class Permutation
      */
     public function isPermutateFamily($string1, $string2)
     {
+        if (strlen($string1) != strlen($string2)) {
+            return false;
+        }
+
         $permutates = $this->permutate($string1);
 
         return in_array($string2, $permutates);
